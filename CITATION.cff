@@ -1,0 +1,33 @@
+﻿cff-version: 1.2.0
+message: "If you use this software, please cite the VeReMi-Graph dataset and the associated data article."
+title: "VeReMi-Graph v1.0 Construction and Reproducibility Code"
+type: software
+authors:
+  - family-names: "Masoodi"
+    given-names: "Faheem Syeed"
+version: "1.0"
+date-released: "2026"
+license: MIT
+repository-code: "TO-BE-ASSIGNED"
+
+references:
+  - type: dataset
+    title: "VeReMi-Graph v1.0: A Temporal Attributed Graph Dataset for Vehicular Misbehavior Detection"
+    authors:
+      - family-names: "Masoodi"
+        given-names: "Faheem Syeed"
+    version: "1"
+    year: 2026
+    doi: "10.17632/s6vvgcnsvz.1"
+
+  - type: article
+    title: "VeReMi: A Dataset for Comparable Evaluation of Misbehavior Detection in VANETs"
+    authors:
+      - family-names: "van der Heijden"
+        given-names: "Rens Wouter"
+      - family-names: "Lukaseder"
+        given-names: "Thomas"
+      - family-names: "Kargl"
+        given-names: "Frank"
+    year: 2018
+    doi: "10.1007/978-3-030-01701-9_18"
