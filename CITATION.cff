@@ -1,4 +1,4 @@
-﻿cff-version: 1.2.0
+cff-version: 1.2.0
 message: "If you use this software, please cite the VeReMi-Graph dataset and the associated data article."
 title: "VeReMi-Graph v1.0 Construction and Reproducibility Code"
 type: software
@@ -8,7 +8,7 @@ authors:
 version: "1.0"
 date-released: "2026"
 license: MIT
-repository-code: "TO-BE-ASSIGNED"
+repository-code: "https://github.com/masoodifahim/VeReMi-Graph-Code"
 
 references:
   - type: dataset
