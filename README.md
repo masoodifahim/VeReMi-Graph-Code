@@ -97,4 +97,60 @@ VeReMi-Graph-Code-v1.0/
 |
 `-- examples/
     |-- load_veremi_graph.py
-    `-- VeReMi_Graph_Demo_Explorer.ipynb
+    `-- VeReMi_Graph_Demo_Explorer.ipynb## Reproducibility and Software Environment
+
+The original VeReMi-Graph v1.0 release corresponds to commit
+`c874d99cabdfd2b4e7207efae84ac656f4af06d8`.
+
+This post-v1.0 reproducibility update restores the original
+graph-construction configuration parameters and provides an
+expanded software environment record.
+
+### Software environment
+
+The verified benchmark environment uses Python 3.14.6.
+
+Principal dependencies are pinned in `requirements.txt`.
+The complete installed package inventory is provided in
+`environment_reproducibility.txt`.
+
+### Source data
+
+Obtain the original VeReMi source archives from the original
+dataset provider. Place the `.tgz` files in a local directory.
+
+Configure the source directory using `VEREMI_RAW_ROOT`.
+
+### Construction workflow
+
+The numbered notebooks in `notebooks/` document the following stages:
+
+- 00: Semantic validation
+- 01: Temporal graph construction
+- 02: Feature engineering
+- 03: Causal node-state completion
+- 04: Feature-integrity auditing
+- 05: Archive-disjoint splitting
+- 06: Balanced split optimization
+- 07: Model-safe schema verification
+- 08: Release packaging
+- 09: PyTorch Geometric conversion
+
+The graph-construction configuration uses one-second windows,
+ground-truth matching tolerance of 1e-6, per-archive exports,
+and Zstandard-compressed Parquet files.
+
+### Computational benchmark
+
+The initial graph-construction stage was benchmarked on Windows 11,
+using an Intel Core i7-13700 processor and approximately 16 GB RAM.
+
+Processing all 225 VeReMi source archives required 1,278.49 seconds
+(21.31 minutes), with approximate peak sampled process-tree RSS
+of 2,175.39 MiB (2.12 GiB).
+
+All 225 archives completed successfully, with zero reported
+archive-level failures.
+
+These measurements exclude subsequent feature engineering,
+splitting, validation, and release packaging.

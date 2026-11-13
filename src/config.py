@@ -96,3 +96,7 @@ for directory in [
 ROOT = RAW_DATA_ROOT
 OUTPUT_ROOT = GRAPH_ENGINE_ROOT
 WINDOW_SIZE = 1.0
+# Original VeReMi-Graph construction parameters
+TIME_TOLERANCE = 1e-6
+SAVE_PER_ARCHIVE = True
+PARQUET_COMPRESSION = "zstd"
