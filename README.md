@@ -182,3 +182,11 @@ Versions: PyTorch=2.15.0+cpu; PyG=2.8.1
 ```
 
 This smoke test verifies software functionality only; it is not a predictive-performance benchmark. Runtime and loss values may vary across environments.
+
+### Environment Compatibility
+
+The versions in `requirements.txt` reproduce the verified dataset-construction environment documented in the manuscript. They are not intended as a universal compatibility specification.
+
+The released demonstration graphs have also been successfully tested in a separate CPU-only environment using Python 3.13.14, NumPy 2.5.4, PyTorch 2.15.0, and PyTorch Geometric 2.8.1.
+
+Compatibility of the complete construction pipeline with Python 3.10/3.11 or other PyTorch 2.x configurations has not been independently verified. Users working in alternative environments should install mutually compatible dependencies and run the provided validation and training tests before relying on the outputs.
