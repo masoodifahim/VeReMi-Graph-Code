@@ -154,3 +154,31 @@ archive-level failures.
 
 These measurements exclude subsequent feature engineering,
 splitting, validation, and release packaging.
+
+## PyTorch Geometric Training Smoke Test
+
+A lightweight training smoke test is provided in `examples/pyg_training_smoke_test.py` to verify that the released demonstration graphs support PyTorch Geometric loading, mini-batching, forward propagation, loss computation, and backpropagation.
+
+Download the demonstration graphs from the [VeReMi-Graph v1.0 release](https://github.com/masoodifahim/VeReMi-Graph-Code/releases/tag/v1.0) and place `small.pt`, `medium.pt`, and `large.pt` inside a `pyg/` directory at the repository root.
+
+Run:
+
+```bash
+python examples/pyg_training_smoke_test.py
+```
+
+**Verified environment:** Python 3.13.14, NumPy 2.5.4, PyTorch 2.15.0+cpu, and PyTorch Geometric 2.8.1.
+
+**Verified execution (CPU):**
+
+```text
+Loaded small: nodes=12, edges=98
+Loaded medium: nodes=43, edges=359
+Loaded large: nodes=209, edges=5752
+Batch 1: graphs=2, edges=457, loss=50.960121
+Batch 2: graphs=1, edges=5752, loss=9.158440
+PASS: one epoch, 2 batches, 6209 edges, elapsed=0.68s
+Versions: PyTorch=2.15.0+cpu; PyG=2.8.1
+```
+
+This smoke test verifies software functionality only; it is not a predictive-performance benchmark. Runtime and loss values may vary across environments.
